@@ -75,7 +75,7 @@ If you do not have the driver installed, you can download it from the MySQL webs
 ### 2.2. Including the Database in an Altium Project
 
 <a name="header02_02_01"></a>
-1. Clone the Libre Library repository to a location that . The repository is located at:
+#### 1. Clone the Libre Library repository to a location that . The repository is located at:
 
 <blockquote style="background-color: rgba(27,31,35,.05);border-radius: 5px;font-size: 100%;margin: 0;padding: 1em 1em; text-align:center;" >	
     <a target="_blank" href="https://github.com/sdamkjar/libre_library.git">https://github.com/sdamkjar/libre_library.git</a>
@@ -88,7 +88,7 @@ The important files and folders in the repository are:
 - `librelib.DbLib` - The Altium database library file
 
 <a name="header02_02_01"></a>
-2. Include the database library file `database.DbLib` in your Altium Project
+#### 2. Include the database library file `database.DbLib` in your Altium Project
 
 To include the `librelib.DbLib` file in your Altium project, right click the `.PrjPcb` file in the `Projects` pane in Altium and select `Add Existing to Project...`
 
@@ -130,39 +130,41 @@ To gain write access to the database, you will need to be added as a user in the
 
 The recommended way to add new components to the database is to set up a Data Source link in `Microsoft Access`. This will allow you to modify the database as spreadsheets.
 
-1. To set up a Data Source link, create a new `Microsoft Access` file and navigate to the `External Data` tab. Click `New Data Source` and select `From Other Sources` and then `ODBC Database`.
+#### 1. To set up a Data Source link, create a new `Microsoft Access` file and navigate to the `External Data` tab. Click `New Data Source` and select `From Other Sources` and then `ODBC Database`.
 
 <div style="text-align:center"><img src ="pics/07.png" ></div>
 <div style="text-align:center"><font color="grey"><i>Fig. 7: Adding New Components to the Database: Set up a Data Source link (step 1)</i></font></div><p></p>
 
-2. Select `Link to the data source by creating a linked table` and click `OK`. Ignore the warning about Adminstrative privileges.
+#### 2. Select `Link to the data source by creating a linked table` and click `OK`. Ignore the warning about Adminstrative privileges.
 
 <div style="text-align:center"><img src ="pics/08.png" ></div>
 <div style="text-align:center"><font color="grey"><i>Fig. 8: Adding New Components to the Database: Set up a Data Source link (step 2)</i></font></div><p></p>
 
-3. Select `User Data Source` and click `Next`.
+#### 3. Select `User Data Source` and click `Next`.
 
-4. Select the `MySQL ODBC 8.x ANSI Driver` and click `Next`.
+#### 4. Select the `MySQL ODBC 8.x ANSI Driver` and click `Next`.
 
 <div style="text-align:center"><img src ="pics/09.png" ></div>
 <div style="text-align:center"><font color="grey"><i>Fig. 9: Adding New Components to the Database: Set up a Data Source link (step 3)</i></font></div><p></p>
 
-5. Click finished and then enter the connection details as shown for the MySQL server and click `OK`. User your own username and password. You can test the connection to make sure it is working.
+#### 5. Click finished and then enter the connection details as shown for the MySQL server and click `OK`. User your own username and password. You can test the connection to make sure it is working.
 
 <div style="text-align:center"><img src ="pics/10.png" ></div>
 <div style="text-align:center"><font color="grey"><i>Fig. 10: Adding New Components to the Database: Set up a Data Source link (step 4)</i></font></div><p></p>
 
-6. After testing the connection, you should see a list of tables in the database. Select the `librelibrary` table and click `OK`.
+#### 6. After testing the connection, you should see a list of tables in the database. Select the `librelibrary` table and click `OK`.
 
 <div style="text-align:center"><img src ="pics/11.png" ></div>
 <div style="text-align:center"><font color="grey"><i>Fig. 11: Adding New Components to the Database: Set up a Data Source link (step 5)</i></font></div><p></p>
 
-7. In the `Link Tables` window, choose 'Select All' and click `OK`.
+#### 7. In the `Link Tables` window, choose 'Select All' and click `OK`.
 
 <div style="text-align:center"><img src ="pics/12.png" ></div>
 <div style="text-align:center"><font color="grey"><i>Fig. 12: Adding New Components to the Database: Set up a Data Source link (step 6)</i></font></div><p></p>
 
-8. You should now see the tables in the `Tables` pane. You can now open any table and add new components to the database.
+#### 8. You should now see the tables in the `Tables` pane. You can now open any table and add new components to the database.
+
+[Back to top...](#headerTop)
 
 <a name="headerA"></a>
 ## Appendix A - Manufacturer Abbreviations

@@ -126,41 +126,41 @@ You can show and hide different columns to help search for components by right c
 To gain write access to the database, you will need to be added as a user in the MySQL server. To request write access, contact the database administrator at `sdamkjar@gmail.com`.
 
 <a name="header03_02"></a>
-### 3.2. Adding New Components to the Database
+### 3.2. Connecting to the Database
 
 The recommended way to add new components to the database is to set up a Data Source link in `Microsoft Access`. This will allow you to modify the database as spreadsheets.
 
 #### 1. To set up a Data Source link, create a new `Microsoft Access` file and navigate to the `External Data` tab. Click `New Data Source` and select `From Other Sources` and then `ODBC Database`.
 
 <div style="text-align:center"><img src ="readme_pics/07.png" ></div>
-<div style="text-align:center"><font color="grey"><i>Fig. 7: Adding New Components to the Database: Set up a Data Source link (step 1)</i></font></div><p></p>
+<div style="text-align:center"><font color="grey"><i>Fig. 7: Connecting to the Database: Set up a Data Source link (step 1)</i></font></div><p></p>
 
 #### 2. Select `Link to the data source by creating a linked table` and click `OK`. Ignore the warning about Adminstrative privileges.
 
 <div style="text-align:center"><img src ="readme_pics/08.png" ></div>
-<div style="text-align:center"><font color="grey"><i>Fig. 8: Adding New Components to the Database: Set up a Data Source link (step 2)</i></font></div><p></p>
+<div style="text-align:center"><font color="grey"><i>Fig. 8: Connecting to the Database: Set up a Data Source link (step 2)</i></font></div><p></p>
 
 #### 3. Select `User Data Source` and click `Next`.
 
 #### 4. Select the `MySQL ODBC 8.x ANSI Driver` and click `Next`.
 
 <div style="text-align:center"><img src ="readme_pics/09.png" ></div>
-<div style="text-align:center"><font color="grey"><i>Fig. 9: Adding New Components to the Database: Set up a Data Source link (step 3)</i></font></div><p></p>
+<div style="text-align:center"><font color="grey"><i>Fig. 9: Connecting to the Database: Set up a Data Source link (step 3)</i></font></div><p></p>
 
 #### 5. Click finished and then enter the connection details as shown for the MySQL server and click `OK`. User your own username and password. You can test the connection to make sure it is working.
 
 <div style="text-align:center"><img src ="readme_pics/10.png" ></div>
-<div style="text-align:center"><font color="grey"><i>Fig. 10: Adding New Components to the Database: Set up a Data Source link (step 4)</i></font></div><p></p>
+<div style="text-align:center"><font color="grey"><i>Fig. 10: Connecting to the Database: Set up a Data Source link (step 4)</i></font></div><p></p>
 
 #### 6. After testing the connection, you should see a list of tables in the database. Select the `librelibrary` table and click `OK`.
 
 <div style="text-align:center"><img src ="readme_pics/11.png" ></div>
-<div style="text-align:center"><font color="grey"><i>Fig. 11: Adding New Components to the Database: Set up a Data Source link (step 5)</i></font></div><p></p>
+<div style="text-align:center"><font color="grey"><i>Fig. 11: Connecting to the Database: Set up a Data Source link (step 5)</i></font></div><p></p>
 
 #### 7. In the `Link Tables` window, choose 'Select All' and click `OK`.
 
 <div style="text-align:center"><img src ="readme_pics/12.png" ></div>
-<div style="text-align:center"><font color="grey"><i>Fig. 12: Adding New Components to the Database: Set up a Data Source link (step 6)</i></font></div><p></p>
+<div style="text-align:center"><font color="grey"><i>Fig. 12: Connecting to the Database: Set up a Data Source link (step 6)</i></font></div><p></p>
 
 #### 8. You should now see the tables in the `Tables` pane. You can now open any table and add new components to the database.
 

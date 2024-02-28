@@ -58,7 +58,7 @@ A brief (less than 2 hours) video series for Altium Beginners, published by Robe
 
 The `MySQL ODBC 8.x ANSI Driver` **(version 8.0 or later)** is required to connect to the database.
 
-To check if you already have the driver installed, open the `ODBC Data Source Administrator` tool by searching for it in the Windows search bar. Click `add` and look for the `MySQL ODBC 8.x ANSI Driver` in the list of drivers. If it is not there, you will need to download and install it.
+To check if you already have the driver installed, open the `ODBC Data Source` tool by searching for it in the Windows search bar. Click `add` and look for the `MySQL ODBC 8.x ANSI Driver` in the list of drivers. If it is not there, you will need to download and install it.
 
 <div style="text-align:center"><img src ="readme_pics/01.png" ></div>
 <div style="text-align:center"><font color="grey"><i>Fig. 1: Checking for the MySQL ODBC 8.x ANSI Driver</i></font></div><p></p>

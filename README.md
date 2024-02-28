@@ -1,1 +1,266 @@
-# altium_libraries
+<a name="headerTop"></a>
+# Libre Library for Altium Designer
+
+Author: Stefan Damkjar (sdamkjar@ualberta.ca)
+
+## Licensing Notice
+Copyright: 2024 Stefan Damkjar
+
+The Libre Library project is licensed under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+The Libre Library project is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+The full text of the license can be found here: <https://www.gnu.org/licenses/>.
+
+## Introduction
+
+The purpose of the Libre Library project is to provide a consistant and carefully curated component library for use in PCB projects. The database is stored on a MySQL server as well as in a Microsoft Access file and is intended to be used in conjunction with the Altium Designer software. The database contains information about each component such as the manufacturer, part number, and link to the manufacturer's datasheet. The Git repository contains the schematic symbol and PCB footprint for each component.
+
+## Table of Contents
+
+1. [Introductory Altium Tutorials](#header01)
+2. [Using the Libre Library](#header02)<br>
+  2.1. [Prerequisites](#header02_01)<br>
+	2.2. [Including the Database in an Altium Project](#header02_02)<br>
+3. [Adding New Content to the Database](#header03)<br>
+  3.1. [Requesting Write Access](#header03_01)<br>
+  3.2. [Connecting to the Database](#header03_02)<br>
+
+### Appendices
+
+1. [Appendix A - Manufacturer Abbreviations](#headerA)<br>
+2. [Appendix B - Acronyms](#headerB)<br>
+
+<a name="header01"></a>
+## 1. Introductory Altium Tutorials
+
+The official getting started tutorial published by Altium:
+
+<blockquote style="background-color: rgba(27,31,35,.05);border-radius: 5px;font-size: 100%;margin: 0;padding: 1em 1em; text-align:center;" >	
+    <a target="_blank" href="https://www.altium.com/documentation/altium-designer/tutorial-complete-design-walkthrough">https://www.altium.com/documentation/altium-designer/tutorial-complete-design-walkthrough</a>
+</blockquote><p></p>
+
+A brief (less than 2 hours) video series for Altium Beginners, published by Robert Feranec (a well known creator of Altium Tutorial content):
+
+
+<blockquote style="background-color: rgba(27,31,35,.05);border-radius: 5px;font-size: 100%;margin: 0;padding: 1em 1em; text-align:center;" >	
+    <a target="_blank" href="https://www.youtube.com/watch?v=PqFtSpAXB9Q&list=PLXvLToQzgzdduBaD4horowdWgcG5uGUW4&pp=iAQB">https://www.youtube.com/watch?v=PqFtSpAXB9Q&list=PLXvLToQzgzdduBaD4horowdWgcG5uGUW4&pp=iAQB</a>
+</blockquote><p></p>
+
+
+[Back to top...](#headerTop)
+
+<a name="header02"></a>
+## 2. Using the Libre Library
+
+<a name="header02_01"></a>
+### 2.1. Prerequisites
+
+The `MySQL ODBC 8.x ANSI Driver` **(version 8.0 or later)** is required to connect to the database.
+
+To check if you already have the driver installed, open the `ODBC Data Source Administrator` tool by searching for it in the Windows search bar. Click `add` and look for the `MySQL ODBC 8.x ANSI Driver` in the list of drivers. If it is not there, you will need to download and install it.
+
+<div style="text-align:center"><img src ="readme_pics/01.png" ></div>
+<div style="text-align:center"><font color="grey"><i>Fig. 1: Checking for the MySQL ODBC 8.x ANSI Driver</i></font></div><p></p>
+
+If you do not have the driver installed, you can download it from the MySQL website using the link below. **Make sure to select the 64-bit version when downloading!**
+
+<blockquote style="background-color: rgba(27,31,35,.05);border-radius: 5px;font-size: 100%;margin: 0;padding: 1em 1em; text-align:center;" >	
+    <a target="_blank" href="https://dev.mysql.com/downloads/connector/odbc/">https://dev.mysql.com/downloads/connector/odbc/</a>
+</blockquote><p></p>
+
+
+
+<a name="header02_02"></a>
+### 2.2. Including the Database in an Altium Project
+
+<a name="header02_02_01"></a>
+#### 1. Clone the Libre Library repository to a location that . The repository is located at:
+
+<blockquote style="background-color: rgba(27,31,35,.05);border-radius: 5px;font-size: 100%;margin: 0;padding: 1em 1em; text-align:center;" >	
+    <a target="_blank" href="https://github.com/sdamkjar/libre_library.git">https://github.com/sdamkjar/libre_library.git</a>
+</blockquote><p></p>
+
+The important files and folders in the repository are:
+
+- `PCB_libs` - Contains the PCB footprints for each component
+- `SCH_libs` - Contains the schematic symbols for each component
+- `librelib.DbLib` - The Altium database library file
+
+<a name="header02_02_01"></a>
+#### 2. Include the database library file `database.DbLib` in your Altium Project
+
+To include the `librelib.DbLib` file in your Altium project, right click the `.PrjPcb` file in the `Projects` pane in Altium and select `Add Existing to Project...`
+
+<div style="text-align:center"><img src ="readme_pics/02.png" ></div>
+<div style="text-align:center"><font color="grey"><i>Fig. 2: Including the Database in an Altium Project: Select "Add Existing to Project..."</i></font></div><p></p>
+
+Navigate to your local copy of the Libre Library repository and select the `librelib.DbLib` file.
+
+<div style="text-align:center"><img src ="readme_pics/03.png" ></div>
+<div style="text-align:center"><font color="grey"><i>Fig. 3: Including the Database in an Altium Project: Choose the .DbLib file</i></font></div><p></p>
+
+Make sure the connection string in the `librelib.DbLib` file is using the version of the MySQL ODBC driver that you have installed. To do this, open the `librelib.DbLib` file in Altium and look for the `Connection String` field. Refer to [Prerequisites](#header02_01) to see how to check which version of the MySQL ODBC driver you have installed and modify `8.3` to match the version you have installed.
+
+<div style="text-align:center"><img src ="readme_pics/04.png" ></div>
+<div style="text-align:center"><font color="grey"><i>Fig. 4: Including the Database in an Altium Project: Modify the Connection String</i></font></div><p></p>
+
+Now, the database is included in your Altium project and you should be able to add pieces from it to your Altium schematics. Open or create a schematic (`.SchDoc`) file, and then open the `Components` pane. In Altium 18 and earlier, it is the `Libraries` pane. If you have added the database correctly, you should see a list of component manufacturers in this pane as shown below.
+
+<div style="text-align:center"><img src ="readme_pics/05.png" ></div>
+<div style="text-align:center"><font color="grey"><i>Fig. 5: Using the component database: Choose the .DbLib file</i></font></div><p></p>
+
+You can show and hide different columns to help search for components by right clicking around the column headers and selecting `Select Columns...` as shown below.
+
+<div style="text-align:center"><img src ="readme_pics/07.png" ></div>
+<div style="text-align:center"><font color="grey"><i>Fig. 6: Using the component database: Choose the .DbLib file</i></font></div><p></p>
+
+[Back to top...](#headerTop)
+
+<a name="header03"></a>
+## 3. Adding New Content to the Database
+
+<a name="header03_01"></a>
+### 3.1. Requesting Write Access
+
+To gain write access to the database, you will need to be added as a user in the MySQL server. To request write access, contact the database administrator at `sdamkjar@gmail.com`.
+
+<a name="header03_02"></a>
+### 3.2. Adding New Components to the Database
+
+The recommended way to add new components to the database is to set up a Data Source link in `Microsoft Access`. This will allow you to modify the database as spreadsheets.
+
+#### 1. To set up a Data Source link, create a new `Microsoft Access` file and navigate to the `External Data` tab. Click `New Data Source` and select `From Other Sources` and then `ODBC Database`.
+
+<div style="text-align:center"><img src ="readme_pics/07.png" ></div>
+<div style="text-align:center"><font color="grey"><i>Fig. 7: Adding New Components to the Database: Set up a Data Source link (step 1)</i></font></div><p></p>
+
+#### 2. Select `Link to the data source by creating a linked table` and click `OK`. Ignore the warning about Adminstrative privileges.
+
+<div style="text-align:center"><img src ="readme_pics/08.png" ></div>
+<div style="text-align:center"><font color="grey"><i>Fig. 8: Adding New Components to the Database: Set up a Data Source link (step 2)</i></font></div><p></p>
+
+#### 3. Select `User Data Source` and click `Next`.
+
+#### 4. Select the `MySQL ODBC 8.x ANSI Driver` and click `Next`.
+
+<div style="text-align:center"><img src ="readme_pics/09.png" ></div>
+<div style="text-align:center"><font color="grey"><i>Fig. 9: Adding New Components to the Database: Set up a Data Source link (step 3)</i></font></div><p></p>
+
+#### 5. Click finished and then enter the connection details as shown for the MySQL server and click `OK`. User your own username and password. You can test the connection to make sure it is working.
+
+<div style="text-align:center"><img src ="readme_pics/10.png" ></div>
+<div style="text-align:center"><font color="grey"><i>Fig. 10: Adding New Components to the Database: Set up a Data Source link (step 4)</i></font></div><p></p>
+
+#### 6. After testing the connection, you should see a list of tables in the database. Select the `librelibrary` table and click `OK`.
+
+<div style="text-align:center"><img src ="readme_pics/11.png" ></div>
+<div style="text-align:center"><font color="grey"><i>Fig. 11: Adding New Components to the Database: Set up a Data Source link (step 5)</i></font></div><p></p>
+
+#### 7. In the `Link Tables` window, choose 'Select All' and click `OK`.
+
+<div style="text-align:center"><img src ="readme_pics/12.png" ></div>
+<div style="text-align:center"><font color="grey"><i>Fig. 12: Adding New Components to the Database: Set up a Data Source link (step 6)</i></font></div><p></p>
+
+#### 8. You should now see the tables in the `Tables` pane. You can now open any table and add new components to the database.
+
+[Back to top...](#headerTop)
+
+<a name="headerA"></a>
+## Appendix A - Manufacturer Abbreviations
+
+`TODO` Finish creating this list
+
+| Manufacturer                | Abbreviation |
+| -------------------------   | ------------ |
+| Abracon LLC                 | AB           |
+| Allegro MicroSystems        |              |
+| Alliance Memory             |              |
+| Alpha Omega                 | AO           |
+| American Technical Ceramics |              |
+| Amphenol                    |              |
+| Analog Devices              |              |
+| Anaren                      |              |
+| Asix Electronics            |              |
+| AVX Corporation             | AVX          |
+| Azurspace                   |              |
+| Bourns                      | BRN          |
+| Broadcom                    |              |
+| BK Precision                | BK           |
+| CK Switches                 |              |
+| Cmosis                      |              |
+| Coilcraft                   |              |
+| Connor Winfield             |              |
+| CTS-Frequency Controls      | CTS          |
+| CUI                         |              |
+| Diodes Incorporated         | DIOD         |
+| Energy Micro                | EM           |
+| FTDI                        |              |
+| Fujitsu                     |              |
+| Grayhill                    |              |
+| Hamamatsu                   |              |
+| Harwin Incorporated         |              |
+| Hillcrest Laboratories      |              |
+| Hirose Electric             |              |
+| Honeywell                   | HMC          |
+| Infineon                    |              |
+| Intel                       |              |
+| International Rectifier     | IR           |
+| ISSI                        |              |
+| IXYS                        |              |
+| Johanson Technology Inc     |              |
+| JST                         | JST          |
+| Kemet                       | KEM          |
+| Keystone                    | KS           |
+| Linear Technology           | LT           |
+| Linx Technology Inc         |              |
+| Maxim Integrated            | MAX          |
+| Memory Protection Devices   | MPD          |
+| Microchip                   | MTC          |
+| Microsemi                   | uSEM         |
+| Mill-Max Manufacturing      |              |
+| Mini Circuits               |              |
+| Molex                       |              |
+| Murata                      | MUR          |
+| Nanolog                     |              |
+| NDK America                 |              |
+| Nexperia                    |              |
+| NXP Semiconductors          | NXP          |
+| Ohmite                      | OHM          |
+| ON Semiconductor            |              |
+| On Shore Technology         | OST          |
+| Orbtronic                   |              |
+| Panasonic                   | PANA         |
+| Phoenix Contact             |              |
+| PUI Audio                   | PUI          |
+| Qorvo                       |              |
+| Richtek                     |              |
+| Riedon                      |              |
+| Rohm Semiconductors         |              |
+| Samtec                      | SAM          |
+| Seiko Instruments           | SKI          |
+| SII Semiconductors          | SII          |
+| Silicon Labs                |              |
+| Silonex                     |              |
+| SkyWorks                    |              |
+| Sparkfun                    |              |
+| Spectrolab                  |              |
+| STMicroelectronics          | STM          |
+| Sullings                    |              |
+| Susumu                      |              |
+| Taiyo Yuden                 | TY           |
+| TDK Corporation             | TDK          |
+| TE Connectivity             | TEC          |
+| Teensy                      |              |
+| Texas Instruments           | TI           |
+| Toshiba                     |              |
+| Trenz Electronic            |              |
+| TT Electronics              |              |
+| Vishay                      | VSH          |
+| Wurth Elecronics            | WL           |
+| Xilinx                      |              |
+
+<a name="headerB"></a>
+## Appendix B - Acronyms
+
+Mouse-over acronyms to see the definition.

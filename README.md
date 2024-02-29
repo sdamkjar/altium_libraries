@@ -159,11 +159,6 @@ The recommended way to add new components to the database is to set up a Data So
 <div style="text-align:center"><img src ="readme_pics/11.png" ></div>
 <div style="text-align:center"><font color="grey"><i>Fig. 11: Connecting to the Database: Set up a Data Source link (step 6)</i></font></div><p></p>
 
-#### 8. Select `Part Number` as the unique record identifier and click `OK`.
-
-<div style="text-align:center"><img src ="readme_pics/12.png" ></div>
-<div style="text-align:center"><font color="grey"><i>Fig. 12: Connecting to the Database: Set up a Data Source link (step 7)</i></font></div><p></p>
-
 #### 8. You should now see the tables in the `Tables` pane. You can now open any table and add new components to the database.
 
 [Back to top...](#headerTop)
@@ -173,55 +168,39 @@ The recommended way to add new components to the database is to set up a Data So
 
 #### 1. To add a new table to the database, copy and paste the `_Template` table and rename it to the new table name.
 
-<div style="text-align:center"><img src ="readme_pics/13.png" ></div>
-<div style="text-align:center"><font color="grey"><i>Fig. 13: Adding a New Table to the Database: Copy and paste the _Template table</i></font></div><p></p>
+<div style="text-align:center"><img src ="readme_pics/12.png" ></div>
+<div style="text-align:center"><font color="grey"><i>Fig. 12: Adding a New Table to the Database: Copy and paste the _Template table</i></font></div><p></p>
 
 #### 2. Name the new table with the manufacturer name and choose `Linked Table` under `Paste Options`. Click `OK`.
 
-<div style="text-align:center"><img src ="readme_pics/14.png" ></div>
-<div style="text-align:center"><font color="grey"><i>Fig. 14: Adding a New Table to the Database: Name the new table</i></font></div><p></p>
+<div style="text-align:center"><img src ="readme_pics/13.png" ></div>
+<div style="text-align:center"><font color="grey"><i>Fig. 13: Adding a New Table to the Database: Name the new table</i></font></div><p></p>
 
 #### 3. Export the new table to the `librelib` database by right clicking the table and selecting `Export` and then `ODBC Database`.
 
-<div style="text-align:center"><img src ="readme_pics/15.png" ></div>
-<div style="text-align:center"><font color="grey"><i>Fig. 15: Adding a New Table to the Database: Export the new table (Step 1)</i></font></div><p></p>
+<div style="text-align:center"><img src ="readme_pics/14.png" ></div>
+<div style="text-align:center"><font color="grey"><i>Fig. 14: Adding a New Table to the Database: Export the new table (Step 1)</i></font></div><p></p>
 
 #### 4. Keep the table name the same and click `OK`.
 
-<div style="text-align:center"><img src ="readme_pics/16.png" ></div>
-<div style="text-align:center"><font color="grey"><i>Fig. 16: Adding a New Table to the Database: Export the new table (Step 2)</i></font></div><p></p>
+<div style="text-align:center"><img src ="readme_pics/15.png" ></div>
+<div style="text-align:center"><font color="grey"><i>Fig. 15: Adding a New Table to the Database: Export the new table (Step 2)</i></font></div><p></p>
 
 #### 5. Select the `librelib` data source and click `OK`.
 
-<div style="text-align:center"><img src ="readme_pics/17.png" ></div>
-<div style="text-align:center"><font color="grey"><i>Fig. 17: Adding a New Table to the Database: Export the new table (Step 3)</i></font></div><p></p>
+<div style="text-align:center"><img src ="readme_pics/16.png" ></div>
+<div style="text-align:center"><font color="grey"><i>Fig. 16: Adding a New Table to the Database: Export the new table (Step 3)</i></font></div><p></p>
 
-#### 6. Right click the table in the `Tables` pane and select `Linked Table Manager`.
+
+#### 6. To add a new component to the table, open the table fill in the fields with the component information.
+
+<div style="text-align:center"><img src ="readme_pics/17.png" ></div>
+<div style="text-align:center"><font color="grey"><i>Fig. 17: Adding a New Table to the Database: Add a new component to the table</i></font></div><p></p>
+
+#### 7. You can copy and paste data from a spreadsheet into the table using the Paste Append feature under the `Home` tab.
 
 <div style="text-align:center"><img src ="readme_pics/18.png" ></div>
-<div style="text-align:center"><font color="grey"><i>Fig. 18: Adding a New Table to the Database: Set the unique record identifier (Step 1)</i></font></div><p></p>
-
-#### 7. Check the box next to `ODBC` and click `Refresh`.
-
-<div style="text-align:center"><img src ="readme_pics/19.png" ></div>
-<div style="text-align:center"><font color="grey"><i>Fig. 19: Adding a New Table to the Database: Set the unique record identifier (Step 2)</i></font></div><p></p>
-
-#### 8. Select the `Part Number` field as the unique record identifier and click `OK`.
-
-<div style="text-align:center"><img src ="readme_pics/20.png" ></div>
-<div style="text-align:center"><font color="grey"><i>Fig. 20: Adding a New Table to the Database: Set the unique record identifier (Step 3)</i></font></div><p></p>
-
-#### 9. To add a new component to the table, open the table fill in the fields with the component information.
-
-<div style="text-align:center"><img src ="readme_pics/21.png" ></div>
-<div style="text-align:center"><font color="grey"><i>Fig. 21: Adding a New Table to the Database: Add a new component to the table</i></font></div><p></p>
-
-#### 10. You can copy and paste data from a spreadsheet into the table using the Paste Append feature under the `Home` tab.
-
-<div style="text-align:center"><img src ="readme_pics/22.png" ></div>
-<div style="text-align:center"><font color="grey"><i>Fig. 22: Adding a New Table to the Database: Copy and paste data into the table</i></font></div><p></p>
-
-
+<div style="text-align:center"><font color="grey"><i>Fig. 18: Adding a New Table to the Database: Copy and paste data into the table</i></font></div><p></p>
 
 [Back to top...](#headerTop)
 

@@ -26,6 +26,7 @@ The purpose of the Libre Library project is to provide a consistant and carefull
   3.1. [Requesting Write Access](#header03_01)<br>
   3.2. [Connecting to the Database](#header03_02)<br>
   3.3. [Adding a New Table to the Database](#header03_03)<br>
+  3.4. [Data Entry Guidelines](#header03_04)<br>
 
 ### Appendices
 
@@ -204,6 +205,29 @@ The recommended way to add new components to the database is to set up a Data So
 
 [Back to top...](#headerTop)
 
+<a name="header03_04"></a>
+### 3.4 Data Entry Guidelines
+
+When adding new components to the database, please follow the guidelines below:
+
+#### 1. Part Number
+
+The part number is a unique identifier used by the database to distinguish between different components. The part number should follow the following format:
+
+<blockquote style="background-color: rgba(27,31,35,.05);border-radius: 5px;font-size: 100%;margin: 0;padding: 1em 1em; text-align:center;" >	
+    PX-MMM-NNNNN
+</blockquote><p></p>
+
+  Where:
+  - `P` is the indicates that the number refers to a physical part.
+  - `X` is the reference designator for the component type. For example, `R` for resistors, `C` for capacitors, `U` for integrated circuits, etc.
+  - `MMM` is the manufacturer abbreviation. See [Appendix A](#headerA) for a list of manufacturer abbreviations.
+  - `NNNNN` is a unique number that distinguishes the part from other parts of the same type from the same manufacturer.
+
+For example, the part number for a 10k ohm resistor from Vishay would be `PR-VSH-00001`.
+
+[Back to top...](#headerTop)
+
 <a name="headerA"></a>
 ## Appendix A - Manufacturer Abbreviations
 
@@ -211,92 +235,90 @@ The recommended way to add new components to the database is to set up a Data So
 
 | Manufacturer                | Abbreviation |
 | -------------------------   | ------------ |
-| Abracon LLC                 | AB           |
-| Allegro MicroSystems        |              |
-| Alliance Memory             |              |
-| Alpha Omega                 | AO           |
-| American Technical Ceramics |              |
-| Amphenol                    |              |
-| Analog Devices              |              |
-| Anaren                      |              |
-| Asix Electronics            |              |
+| Abracon LLC                 | ABR          |
+| Allegro MicroSystems        | AMS          |
+| Alliance Memory             | ALM          |
+| Alpha Omega                 | AOS          |
+| American Technical Ceramics | ATC          |
+| Amphenol                    | AMP          |
+| Analog Devices              | ADI          |
+| Anaren                      | ANA          |
+| Asix Electronics            | ASX          |
 | AVX Corporation             | AVX          |
-| Azurspace                   |              |
+| Azurspace                   | AZU          |
 | Bourns                      | BRN          |
-| Broadcom                    |              |
-| BK Precision                | BK           |
-| CK Switches                 |              |
-| Cmosis                      |              |
-| Coilcraft                   |              |
-| Connor Winfield             |              |
+| Broadcom                    | BCL          |
+| BK Precision                | BKP          |
+| CK Switches                 | CKS          |
+| Cmosis                      | CMO          |
+| Coilcraft                   | CCI          |
+| Connor Winfield             | CWC          |
 | CTS-Frequency Controls      | CTS          |
-| CUI                         |              |
-| Diodes Incorporated         | DIOD         |
-| Energy Micro                | EM           |
-| FTDI                        |              |
-| Fujitsu                     |              |
-| Grayhill                    |              |
-| Hamamatsu                   |              |
-| Harwin Incorporated         |              |
-| Hillcrest Laboratories      |              |
-| Hirose Electric             |              |
-| Honeywell                   | HMC          |
-| Infineon                    |              |
-| Intel                       |              |
-| International Rectifier     | IR           |
-| ISSI                        |              |
-| IXYS                        |              |
-| Johanson Technology Inc     |              |
+| CUI                         | CUI          |
+| Diodes Incorporated         | DIO          |
+| Energy Micro                | EMI          |
+| FTDI                        | FTD          |
+| Fujitsu                     | FUJ          |
+| Grayhill                    | GRH          |
+| Hamamatsu                   | HAM          |
+| Harwin Incorporated         | HAR          |
+| Hillcrest Laboratories      | HCL          |
+| Hirose Electric             | HRE          |
+| Honeywell                   | HWC          |
+| Infineon                    | INF          |
+| Intel                       | INT          |
+| International Rectifier     | INR          |
+| ISSI                        | ISS          |
+| IXYS                        | IXY          |
+| Johanson Technology Inc     | JTI          |
 | JST                         | JST          |
 | Kemet                       | KEM          |
-| Keystone                    | KS           |
-| Linear Technology           | LT           |
-| Linx Technology Inc         |              |
+| Keystone                    | KSE          |
+| Linear Technology           | LTC          |
+| Linx Technology Inc         | LNX          |
 | Maxim Integrated            | MAX          |
 | Memory Protection Devices   | MPD          |
-| Microchip                   | MTC          |
-| Microsemi                   | uSEM         |
-| Mill-Max Manufacturing      |              |
-| Mini Circuits               |              |
-| Molex                       |              |
+| Microchip                   | MCT          |
+| Mill-Max Manufacturing      | MMM          |
+| Mini Circuits               | MIN          |
+| Molex                       | MLX          |
 | Murata                      | MUR          |
-| Nanolog                     |              |
-| NDK America                 |              |
-| Nexperia                    |              |
+| Nanolog                     | NAN          |
+| NDK America                 | NDK          |
+| Nexperia                    | NEX          |
 | NXP Semiconductors          | NXP          |
 | Ohmite                      | OHM          |
-| ON Semiconductor            |              |
+| ON Semiconductor            | ONS          |
 | On Shore Technology         | OST          |
-| Orbtronic                   |              |
-| Panasonic                   | PANA         |
-| Phoenix Contact             |              |
+| Orbtronic                   | ORB          |
+| Panasonic                   | PAN          |
+| Phoenix Contact             | PHC          |
 | PUI Audio                   | PUI          |
-| Qorvo                       |              |
-| Richtek                     |              |
-| Riedon                      |              |
-| Rohm Semiconductors         |              |
+| Qorvo                       | QOR          |
+| Richtek                     | RIC          |
+| Riedon                      | RDN          |
+| Rohm Semiconductors         | ROH          |
 | Samtec                      | SAM          |
 | Seiko Instruments           | SKI          |
 | SII Semiconductors          | SII          |
-| Silicon Labs                |              |
-| Silonex                     |              |
-| SkyWorks                    |              |
-| Sparkfun                    |              |
-| Spectrolab                  |              |
+| Silicon Labs                | SIL          |
+| Silonex                     | SLX          |
+| SkyWorks                    | SKW          |
+| Sparkfun                    | SPK          |
+| Spectrolab                  | SPL          |
 | STMicroelectronics          | STM          |
-| Sullings                    |              |
-| Susumu                      |              |
-| Taiyo Yuden                 | TY           |
+| Sullings                    | SUL          |
+| Susumu                      | SUS          |
+| Taiyo Yuden                 | TAY          |
 | TDK Corporation             | TDK          |
 | TE Connectivity             | TEC          |
-| Teensy                      |              |
-| Texas Instruments           | TI           |
-| Toshiba                     |              |
-| Trenz Electronic            |              |
-| TT Electronics              |              |
+| Teensy                      | TEE          |
+| Toshiba                     | TXS          |
+| Trenz Electronic            | TNZ          |
+| TT Electronics              | TTE          |
 | Vishay                      | VSH          |
-| Wurth Elecronics            | WL           |
-| Xilinx                      |              |
+| Wurth Elecronics            | WRT          |
+| Xilinx                      | XLX          |
 
 <a name="headerB"></a>
 ## Appendix B - Acronyms

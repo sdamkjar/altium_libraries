@@ -192,7 +192,7 @@ The recommended way to add new components to the database is to set up a Data So
 <div style="text-align:center"><font color="grey"><i>Fig. 16: Adding a New Table to the Database: Export the new table (Step 3)</i></font></div><p></p>
 
 
-#### 6. To add a new component to the table, open the table fill in the fields with the component information.
+#### 6. To add a new component to the table, open the table and fill in the fields with the component information.
 
 <div style="text-align:center"><img src ="readme_pics/17.png" ></div>
 <div style="text-align:center"><font color="grey"><i>Fig. 17: Adding a New Table to the Database: Add a new component to the table</i></font></div><p></p>

@@ -159,7 +159,7 @@ The recommended way to add new components to the database is to set up a Data So
 <div style="text-align:center"><img src ="readme_pics/11.png" ></div>
 <div style="text-align:center"><font color="grey"><i>Fig. 11: Connecting to the Database: Set up a Data Source link (step 6)</i></font></div><p></p>
 
-#### 8. Select `ID` as the unique record identifier and click `OK`.
+#### 8. Select `Part Number` as the unique record identifier and click `OK`.
 
 <div style="text-align:center"><img src ="readme_pics/12.png" ></div>
 <div style="text-align:center"><font color="grey"><i>Fig. 12: Connecting to the Database: Set up a Data Source link (step 7)</i></font></div><p></p>
@@ -196,15 +196,30 @@ The recommended way to add new components to the database is to set up a Data So
 <div style="text-align:center"><img src ="readme_pics/17.png" ></div>
 <div style="text-align:center"><font color="grey"><i>Fig. 17: Adding a New Table to the Database: Export the new table (Step 3)</i></font></div><p></p>
 
-#### 6. To add a new component to the table, open the table fill in the fields with the component information.
+#### 6. Right click the table in the `Tables` pane and select `Linked Table Manager`.
 
 <div style="text-align:center"><img src ="readme_pics/18.png" ></div>
-<div style="text-align:center"><font color="grey"><i>Fig. 18: Adding a New Table to the Database: Add a new component to the table</i></font></div><p></p>
+<div style="text-align:center"><font color="grey"><i>Fig. 18: Adding a New Table to the Database: Set the unique record identifier (Step 1)</i></font></div><p></p>
 
-#### 7. You can copy and paste data from a spreadsheet into the table using the Paste Append feature under the `Home` tab.
+#### 7. Check the box next to `ODBC` and click `Refresh`.
 
 <div style="text-align:center"><img src ="readme_pics/19.png" ></div>
-<div style="text-align:center"><font color="grey"><i>Fig. 19: Adding a New Table to the Database: Copy and paste data into the table</i></font></div><p></p>
+<div style="text-align:center"><font color="grey"><i>Fig. 19: Adding a New Table to the Database: Set the unique record identifier (Step 2)</i></font></div><p></p>
+
+#### 8. Select the `Part Number` field as the unique record identifier and click `OK`.
+
+<div style="text-align:center"><img src ="readme_pics/20.png" ></div>
+<div style="text-align:center"><font color="grey"><i>Fig. 20: Adding a New Table to the Database: Set the unique record identifier (Step 3)</i></font></div><p></p>
+
+#### 9. To add a new component to the table, open the table fill in the fields with the component information.
+
+<div style="text-align:center"><img src ="readme_pics/21.png" ></div>
+<div style="text-align:center"><font color="grey"><i>Fig. 21: Adding a New Table to the Database: Add a new component to the table</i></font></div><p></p>
+
+#### 10. You can copy and paste data from a spreadsheet into the table using the Paste Append feature under the `Home` tab.
+
+<div style="text-align:center"><img src ="readme_pics/22.png" ></div>
+<div style="text-align:center"><font color="grey"><i>Fig. 22: Adding a New Table to the Database: Copy and paste data into the table</i></font></div><p></p>
 
 
 

@@ -1,40 +1,4 @@
 [OutputDatabaseLinkFile]
 Version=1.1
 [DatabaseLinks]
-ConnectionString=DRIVER={MySQL ODBC 8.* ANSI Driver};SERVER=50.99.203.240;PORT=3306;DATABASE=librelibrary;USER=readonly;PWD=password
-AddMode=3
-RemoveMode=1
-UpdateMode=2
-ViewMode=0
-LeftQuote=`
-RightQuote=`
-QuoteTableNames=1
-UseTableSchemaName=0
-DefaultColumnType=VARCHAR(255)
-LibraryDatabaseType=
-LibraryDatabasePath=
-DatabasePathRelative=0
-TopPanelCollapsed=0
-LibrarySearchPath=
-OrcadMultiValueDelimiter=,
-SearchSubDirectories=0
-SchemaName=
-LastFocusedTable=abracon
-[Table1]
-SchemaName=
-TableName=abracon
-Enabled=True
-UserWhere=0
-UserWhereText=
-[FieldMap1]
-Options=FieldName=abracon.Part Number|TableNameOnly=abracon|FieldNameOnly=Part Number|FieldType=0|ParameterName=Part Number|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
-[FieldMap2]
-Options=FieldName=abracon.Description|TableNameOnly=abracon|FieldNameOnly=Description|FieldType=1|ParameterName=[Description]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
-[FieldMap3]
-Options=FieldName=abracon.Library Path|TableNameOnly=abracon|FieldNameOnly=Library Path|FieldType=1|ParameterName=[Library Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
-[FieldMap4]
-Options=FieldName=abracon.Footprint Path|TableNameOnly=abracon|FieldNameOnly=Footprint Path|FieldType=1|ParameterName=[Footprint Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
-[FieldMap5]
-Options=FieldName=abracon.Library Ref|TableNameOnly=abracon|FieldNameOnly=Library Ref|FieldType=1|ParameterName=[Library Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
-[FieldMap6]
-Options=FieldName=abracon.Footprint Ref|TableNameOnly=abracon|FieldNameOnly=Footprint Ref|FieldType=1|ParameterName=[Footprint Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+ConnectionString=DRIVER={MySQL ODBC 8.3 ANSI Driver};SERVER=50.99.203.240;PORT=3306;DATABASE=librelib;USER=readonly;PWD=password
